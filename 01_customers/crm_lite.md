@@ -1,326 +1,228 @@
-# CRM Liviano
+# CRM — Meta Build City (Datos Reales)
 
-## 1. Base de Datos de Contactos
+> **Última actualización:** Marzo 2026
+> **Fuente de verdad:** Notion (databases Customers, Projects, Opportunities, Contacts)
+> **Nota:** Este archivo se mantiene como respaldo offline. La data viva está en Notion.
 
-### Códigos de Estado
+---
+
+## 1. Códigos de Estado
+
 | Código | Estado | Descripción |
 |--------|--------|-------------|
-| `PROSPECT` | Prospecto | Contacto identificado, aún sin interacción significativa |
-| `QUALIFIED` | Calificado | Discovery call realizada, dolor y capacidad de compra confirmados |
-| `ACTIVE_DEAL` | Deal activo | Propuesta en curso o negociación activa |
-| `CLIENT` | Cliente | Contrato firmado, proyecto en ejecución o completado |
-| `CHURNED` | Inactivo | Ex-cliente que no ha renovado o contratado nuevamente |
-| `PARTNER` | Partner/Aliado | Relación de colaboración, no es cliente directo |
-
-### Sistema de Tags
-
-**Por servicio de interés:**
-`#BIM` `#AI` `#XR` `#Blockchain` `#Marketing`
-
-**Por segmento:**
-`#Constructora` `#Inmobiliaria` `#Arquitectura` `#Gobierno` `#Minería` `#Otro`
-
-**Por prioridad:**
-`#Hot` -- Oportunidad activa, alta probabilidad de cerrar en 30 días
-`#Warm` -- Interés confirmado, timeline de 1-3 meses
-`#Cold` -- Contacto válido pero sin urgencia actual
-
-**Por fuente:**
-`#Referido` `#Evento` `#LinkedIn` `#Web` `#Outbound` `#MercadoPublico`
+| `CLIENT` | Cliente activo | Proyecto en ejecución o membresía activa |
+| `COMPLETED` | Completado | Proyecto entregado, relación mantenida |
+| `PROSPECT` | Prospecto | En conversación, propuesta enviada o por desarrollar |
+| `ACADEMIC` | Académico | Relación institucional sin revenue directo |
+| `PARTNER` | Partner | Colaboración estratégica |
 
 ---
 
-### Directorio de Contactos
+## 2. Clientes Activos
 
-#### Contacto 1
+### FinteChile
 | Campo | Valor |
 |-------|-------|
-| **Empresa** | Echeverría Izquierdo S.A. |
-| **Contacto** | Andrés Matte Larraín |
-| **Cargo** | Gerente de Innovación y Desarrollo |
-| **Email** | amatte@ei.cl |
-| **Teléfono** | +56 9 8765 4321 |
-| **LinkedIn** | linkedin.com/in/andresmatte |
-| **Segmento** | Constructora Grande |
-| **Estado** | `ACTIVE_DEAL` |
-| **Tags** | `#Constructora` `#AI` `#BIM` `#Hot` `#Evento` |
-| **Servicios de interés** | AI Site Monitoring, BIM Coordination |
-| **Notas** | Conocí en Expo Edifica 2025. Muy interesado en monitoreo de avance con drones. Tiene proyecto en Lo Barnechea de 25 pisos. Presupuesto de innovación aprobado para 2025. Reporta al Gerente General. |
-| **Último contacto** | 2025-02-10 (Discovery call) |
-| **Próxima acción** | Enviar propuesta de demo AI monitoring para su proyecto antes del 14/02 |
+| **Empresa** | Asociación FinteChile |
+| **Industria** | Fintech |
+| **Contacto principal** | Joseph Sánchez |
+| **Estado** | `CLIENT` |
+| **Servicio** | Metabuild Smart — Implementación + membresía mensual |
+| **Revenue total** | $7,800 USD ($2,000 anterior + $5,800 Smart) |
+| **Notion DB** | `313a6b94-34ae-803b-b72c-cfa23bc66125` |
+| **Slack** | #fintechile-master-v4 |
+| **Canva** | Carpeta FinteChile (2 diseños) |
+| **Estado actual** | En implementación, pago de $5,800 esta semana |
+| **Notas** | Rodrigo trabajó previamente con Joseph. Chile Fintech Forum 2025 fue un proyecto XR para ellos. Ahora implementando Smart como sistema de gestión central. Mathías Navarro involucrado en implementación. |
 
 ---
 
-#### Contacto 2
+### Neurocupa
 | Campo | Valor |
 |-------|-------|
-| **Empresa** | Inmobiliaria Fundamenta |
-| **Contacto** | Carolina Vial Echenique |
-| **Cargo** | Gerente Comercial |
-| **Email** | cvial@fundamenta.cl |
-| **Teléfono** | +56 9 7654 3210 |
-| **LinkedIn** | linkedin.com/in/carolinavial |
-| **Segmento** | Inmobiliaria |
-| **Estado** | `ACTIVE_DEAL` |
-| **Tags** | `#Inmobiliaria` `#XR` `#Marketing` `#Hot` `#Referido` |
-| **Servicios de interés** | XR Virtual Tours, Marketing Digital |
-| **Notas** | Referida por contacto de la CChC. Proyecto "Parque Bicentenario" en Vitacura, 180 dptos. Velocidad de venta bajo el plan. Necesitan herramienta diferenciadora para sala de ventas. Propuesta enviada el 05/02. Mandante del proyecto es Fundamenta + socio financiero. |
-| **Último contacto** | 2025-02-05 (Envío de propuesta) |
-| **Próxima acción** | Follow-up telefónico viernes 14/02 para obtener feedback de propuesta |
+| **Empresa** | Neurocupa — Centro de Terapias |
+| **Industria** | Salud |
+| **Contacto principal** | Diego Salinas Urbina |
+| **Sedes** | La Florida y Puente Alto, Santiago |
+| **Web** | neurocupa.cl |
+| **Estado** | `CLIENT` |
+| **Servicio** | Metabuild Smart — Sistema completo implementado |
+| **Revenue total** | $2,350 USD (por cobrar) |
+| **Notion DB Control Pagos** | `31aa6b9434ae80d5b52aed7947e43adc` |
+| **Sistema Smart implementado** | Servicios y Especialidades, Reuniones, Pacientes, Terapeutas, Documentos |
+| **Canva** | Metabuild Smart - Centro de Salud - Neurocupa v2 |
+| **Notas** | 72 registros en control de pagos. 5 terapeutas. Sistema completo con 5+ databases. Primer caso de Smart para salud. |
 
 ---
 
-#### Contacto 3
+## 3. Clientes Completados
+
+### World (ex-Worldcoin / Tools for Humanity)
 | Campo | Valor |
 |-------|-------|
-| **Empresa** | Sabbagh Arquitectos |
-| **Contacto** | Felipe Sabbagh |
-| **Cargo** | Socio Director |
-| **Email** | fsabbagh@sabbagharchitects.cl |
-| **Teléfono** | +56 9 6543 2109 |
-| **LinkedIn** | linkedin.com/in/felipesabbagh |
-| **Segmento** | Arquitectura |
-| **Estado** | `QUALIFIED` |
-| **Tags** | `#Arquitectura` `#XR` `#BIM` `#Warm` `#LinkedIn` |
-| **Servicios de interés** | XR Design Visualization, BIM Coordination |
-| **Notas** | Contacté por LinkedIn después de ver publicación sobre nuevo proyecto de hospital. Oficina de ~60 profesionales, trabajan en Revit. Tienen proyecto de hospital regional en etapa de diseño. Interesado en XR para presentación al Servicio de Salud. Aceptó reunirse. |
-| **Último contacto** | 2025-02-01 (Email intro aceptado) |
-| **Próxima acción** | Agendar discovery call semana del 17/02 |
+| **Empresa** | Tools for Humanity (World) |
+| **Industria** | Web3 / Crypto |
+| **Estado** | `COMPLETED` |
+| **Servicio** | Operaciones Web3 + Marketing experiencial |
+| **Revenue total** | ~$150,000 USD |
+| **Duración** | ~1 año (2024) |
+| **Operación** | 5 ciudades sur de Chile: Puerto Montt, Puerto Varas, Valdivia, Chiloé, Curicó |
+| **Escala** | Hasta 50 personas, 30 simultáneas, 5 locales |
+| **Usuarios registrados** | 9,100 |
+| **Equipo clave** | Rodrigo Requena + Mathías Navarro (co-lideraron), Luz Rivera (apoyo) |
+| **Notas** | Proyecto más grande de MBC. Representó 72% del revenue total. Demostró capacidad de escalar operaciones masivas. |
 
 ---
 
-#### Contacto 4
+### Parque Cordillera
 | Campo | Valor |
 |-------|-------|
-| **Empresa** | MOP - Dirección de Arquitectura |
-| **Contacto** | Roberto Campos Fuentes |
-| **Cargo** | Jefe División Edificación Pública |
-| **Email** | rcampos@mop.gov.cl |
-| **Teléfono** | +56 2 2449 XXXX |
-| **LinkedIn** | linkedin.com/in/robertocamposf |
-| **Segmento** | Gobierno |
-| **Estado** | `PROSPECT` |
-| **Tags** | `#Gobierno` `#BIM` `#AI` `#Cold` `#Evento` |
-| **Servicios de interés** | BIM Implementation (PlanBIM), AI Project Monitoring |
-| **Notas** | Intercambiamos tarjetas en evento PlanBIM Chile en enero. Mencionó que están buscando cómo implementar revisión BIM en sus proyectos de edificación pública. Tiene equipo técnico de ~15 personas. Proceso de compra por Mercado Público. Largo ciclo de decisión. |
-| **Último contacto** | 2025-02-08 (Evento PlanBIM) |
-| **Próxima acción** | Enviar email personalizado con propuesta de workshop BIM gratuito para su equipo |
+| **Empresa** | Asociación Parque Cordillera |
+| **Industria** | Medio ambiente / Educación |
+| **Contacto** | Carlos Rivas (Jefe de Operaciones) |
+| **Estado** | `COMPLETED` |
+| **Servicio** | 3 servicios XR: Metabuild City + Metabuild VR + Metabuild 360° |
+| **Revenue total** | ~$15,000 USD |
+| **Duración** | Agosto 2023 - Enero 2024 |
+| **Equipo** | Javier Galecio (City), Ignacio (VR), Herbert Zapata (360°), Nicole Herdin (Ops) |
+| **Testimonial** | "El metaverso tiene un enorme potencial para la educación ambiental..." — Carlos Rivas |
+| **Notas** | Primer cliente de MBC. Trigger de la fundación legal. Proyecto de 3 servicios que validó el modelo. Existe oportunidad Smart en pipeline. |
 
 ---
 
-#### Contacto 5
+### UNAB (Universidad Andrés Bello)
 | Campo | Valor |
 |-------|-------|
-| **Empresa** | Inmobiliaria Almagro |
-| **Contacto** | Martín Benavides Correa |
-| **Cargo** | Gerente de Marketing |
-| **Email** | mbenavides@almagro.cl |
-| **Teléfono** | +56 9 5432 1098 |
-| **LinkedIn** | linkedin.com/in/martinbenavides |
-| **Segmento** | Inmobiliaria |
-| **Estado** | `ACTIVE_DEAL` |
-| **Tags** | `#Inmobiliaria` `#XR` `#Marketing` `#Hot` `#Outbound` |
-| **Servicios de interés** | XR Virtual Tours + Showroom, Marketing Digital paquete |
-| **Notas** | Prospección outbound en diciembre. Tiene 3 proyectos nuevos para 2025. Muy interesado en paquete XR + Marketing. En negociación, pidió descuento por volumen (2 proyectos). Presupuesto aprobado, decision maker es él + Gerente General. |
-| **Último contacto** | 2025-02-07 (Reunión de negociación) |
-| **Próxima acción** | Enviar propuesta revisada con pricing por paquete de 2 proyectos antes del 12/02 |
+| **Empresa** | Universidad Andrés Bello |
+| **Industria** | Educación |
+| **Estado** | `COMPLETED` |
+| **Servicio** | Metabuild VR — Recorrido virtual inmobiliario para postgrado |
+| **Revenue total** | $3,000 USD |
+| **Equipo** | Francisco Román (desarrollo Unity) |
+| **Canva** | Carpeta UNAB (2 diseños: Kick-Off, Avance 1) |
 
 ---
 
-#### Contacto 6
+### Black & Decker
 | Campo | Valor |
 |-------|-------|
-| **Empresa** | Constructora Novatec S.A. |
-| **Contacto** | Patricio Undurraga Errázuriz |
-| **Cargo** | Gerente de Operaciones |
-| **Email** | pundurraga@novatec.cl |
-| **Teléfono** | +56 9 4321 0987 |
-| **LinkedIn** | linkedin.com/in/patricioundurraga |
-| **Segmento** | Constructora Mediana |
-| **Estado** | `PROSPECT` |
-| **Tags** | `#Constructora` `#XR` `#BIM` `#Warm` `#Referido` |
-| **Servicios de interés** | XR Safety Training, BIM básico |
-| **Notas** | Referido por proveedor de EPP. Constructora mediana (~150 empleados, 8 proyectos activos). Tuvo incidente de seguridad reciente (caída de altura, trabajador hospitalizado). Buscando innovar en safety training. No tienen BIM aún. CORFO podría cofinanciar. |
-| **Último contacto** | 2025-02-03 (Llamada introductoria breve) |
-| **Próxima acción** | Enviar caso de estudio de XR safety training y agendar demo presencial |
+| **Empresa** | Black & Decker |
+| **Industria** | Herramientas / Retail |
+| **Estado** | `COMPLETED` → `PROSPECT` (nueva oportunidad Smart $5K) |
+| **Servicio** | Metabuild VR — Showroom virtual jardinería |
+| **Revenue completado** | $600 USD |
+| **Oportunidad nueva** | Metabuild Smart — $5,000 USD (por desarrollar) |
+| **Equipo** | Francisco Román (desarrollo Unity) |
+| **Canva** | Carpeta B&D (4 diseños: Kick-Off, Avance, Capacitación, Diseños) |
+| **Notion** | Proyecto activo con múltiples reuniones registradas |
 
 ---
 
-#### Contacto 7
+### Grupo HUB
 | Campo | Valor |
 |-------|-------|
-| **Empresa** | Hildebrandt Gruppe |
-| **Contacto** | Werner Hildebrandt |
-| **Cargo** | Socio Director |
-| **Email** | whildebrandt@hildebrandt.cl |
-| **Teléfono** | +56 9 3210 9876 |
-| **LinkedIn** | linkedin.com/in/wernerhildebrandt |
-| **Segmento** | Partner (Consultoría Lean) |
-| **Estado** | `PARTNER` |
-| **Tags** | `#Otro` `#BIM` `#Referido` |
-| **Servicios de interés** | N/A -- alianza estratégica |
-| **Notas** | Potencial partner estratégico. Ellos hacen Lean Construction consulting, nosotros hacemos tech. Oportunidad de referral cruzado: ellos nos refieren clientes que necesitan tech, nosotros referimos los que necesitan Lean. Reunión exploratoria realizada, ambos interesados. |
-| **Último contacto** | 2025-01-25 (Almuerzo exploratorio) |
-| **Próxima acción** | Formalizar acuerdo de referral mutuo con estructura de comisión |
+| **Empresa** | Grupo HUB |
+| **Industria** | Tecnología |
+| **Estado** | `COMPLETED` |
+| **Servicio** | XR |
+| **Revenue total** | $5,500 USD |
 
 ---
 
-#### Contacto 8
+### Aleph (Ciudad de Crecimiento)
 | Campo | Valor |
 |-------|-------|
-| **Empresa** | Salfacorp |
-| **Contacto** | Ignacio Pérez-Cotapos |
-| **Cargo** | Subgerente de Innovación |
-| **Email** | iperez@salfacorp.com |
-| **Teléfono** | +56 9 2109 8765 |
-| **LinkedIn** | linkedin.com/in/ignacioperez |
-| **Segmento** | Constructora Grande |
-| **Estado** | `PROSPECT` |
-| **Tags** | `#Constructora` `#AI` `#BIM` `#Blockchain` `#Cold` `#LinkedIn` |
-| **Servicios de interés** | AI Monitoring, BIM 4D/5D, Blockchain Payments |
-| **Notas** | Contacté por LinkedIn, aceptó conexión pero no ha respondido al mensaje. Salfacorp tiene departamento de innovación establecido. Probablemente ya trabajan con otros proveedores BIM. Oportunidad grande si logramos entrar. Necesito encontrar un ángulo diferente -- quizás AI o Blockchain que no tengan aún. |
-| **Último contacto** | 2025-01-30 (Mensaje LinkedIn sin respuesta) |
-| **Próxima acción** | Segundo intento por email con contenido de valor (artículo sobre AI en construcción). Si no responde, buscar otro contacto en Salfacorp. |
+| **Empresa** | Aleph, Ciudad de Crecimiento |
+| **Industria** | Startup ecosystem |
+| **Estado** | `COMPLETED` |
+| **Servicio** | Metabuild City — 3 espacios (Hub, Studio, Wellness) |
+| **Revenue total** | ~$1,000 USD (en beneficios: hotel + pase actividades) |
 
 ---
 
-## 2. Log de Actividades
-
-### Template
-
-| Fecha | Empresa | Contacto | Tipo | Resumen | Próxima acción | Fecha próxima acción |
-|-------|---------|----------|------|---------|----------------|---------------------|
-| | | | Call / Email / Meeting / Demo / Event / Internal | | | |
-
-### Registro de actividades recientes
-
-| Fecha | Empresa | Contacto | Tipo | Resumen | Próxima acción | Fecha próxima acción |
-|-------|---------|----------|------|---------|----------------|---------------------|
-| 2025-02-10 | Echeverría Izquierdo | Andrés Matte | Call | Discovery call 45 min. Dolor principal: no tienen visibilidad de avance en tiempo real. Proyecto Lo Barnechea 25 pisos, inicio obra marzo. Presupuesto innovación ~$100K año. Decision makers: él + Gerente General. | Preparar demo AI monitoring personalizada | 2025-02-14 |
-| 2025-02-08 | MOP - Dir. Arquitectura | Roberto Campos | Event | Evento PlanBIM Chile. Intercambiamos tarjetas. Mencionó dificultad para revisar modelos BIM que reciben de consultores. | Enviar email personalizado + oferta de workshop | 2025-02-12 |
-| 2025-02-07 | Inmobiliaria Almagro | Martín Benavides | Meeting | Reunión de negociación en sus oficinas. Quieren paquete XR + Marketing para 2 proyectos. Pidieron descuento del 15% por volumen. Gerente General aprueba si el precio ajusta. | Enviar propuesta revisada con pricing paquete | 2025-02-12 |
-| 2025-02-05 | Fundamenta | Carolina Vial | Email | Envié propuesta formal para proyecto Parque Bicentenario. $22K por XR tour (5 tipologías) + showroom web. Acusó recibo y dijo que la revisaría con equipo. | Follow-up telefónico | 2025-02-14 |
-| 2025-02-03 | Constructora Novatec | Patricio Undurraga | Call | Llamada intro 15 min (referido). Tuvo accidente reciente, buscando formas de mejorar safety training. No conoce XR. Muy receptivo. | Enviar caso de estudio + agendar demo | 2025-02-10 |
-| 2025-02-01 | Sabbagh Arquitectos | Felipe Sabbagh | Email | Email intro por LinkedIn. Vio publicación sobre proyecto hospital. Respondió interesado en conversar sobre XR para presentación al mandante. | Agendar discovery call | 2025-02-17 |
-| 2025-01-30 | Salfacorp | Ignacio Pérez-Cotapos | LinkedIn | Mensaje LinkedIn: "Hola Ignacio, vi que Salfacorp tiene un enfoque interesante en innovación. Me encantaría conversar sobre cómo la AI está cambiando el monitoreo de obras..." Sin respuesta. | Segundo intento por email | 2025-02-13 |
-| 2025-01-25 | Hildebrandt Gruppe | Werner Hildebrandt | Meeting | Almuerzo exploratorio en Vitacura. Muy buena química. Coincidimos en que Lean + Tech es combo poderoso. Propuso referral cruzado. | Formalizar acuerdo de partnership | 2025-02-15 |
-| 2025-01-20 | Fundamenta | Carolina Vial | Meeting | Primera reunión en oficinas Fundamenta. Demo de XR tour con headset VR. Quedó muy impresionada. "Esto es exactamente lo que necesitamos". Pidió propuesta para proyecto Parque Bicentenario. | Preparar y enviar propuesta | 2025-02-05 |
-| 2025-01-15 | Echeverría Izquierdo | Andrés Matte | Event | Expo Edifica -- nos visitó en stand. Probó demo de AI monitoring. Intercambiamos datos. Dijo "esto es lo que he estado buscando". | Agendar discovery call | 2025-02-10 |
+### Odisea (experiencia de Rodrigo)
+| Campo | Valor |
+|-------|-------|
+| **Empresa** | Odisea |
+| **Industria** | Web3 |
+| **Estado** | `COMPLETED` |
+| **Servicio** | Lead Operations (empleo, no cliente MBC — pero relevante como origen de Smart) |
+| **Revenue** | ~$20,000 USD (7 meses) |
+| **Notas** | Rodrigo gestionó 2 aceleradoras. Implementó Notion + IA + reportes. Proto-Metabuild Smart. |
 
 ---
 
-## 3. Resumen del Pipeline por Estado
+## 4. Relaciones Académicas
 
-### Vista rápida
-
-| Estado | Contactos | Empresas | Valor potencial total |
-|--------|-----------|----------|----------------------|
-| `PROSPECT` | 3 | 3 (MOP, Novatec, Salfacorp) | $160,000 |
-| `QUALIFIED` | 1 | 1 (Sabbagh) | $12,000 |
-| `ACTIVE_DEAL` | 3 | 3 (EI, Fundamenta, Almagro) | $152,000 |
-| `CLIENT` | 0 | 0 | $0 |
-| `CHURNED` | 0 | 0 | $0 |
-| `PARTNER` | 1 | 1 (Hildebrandt) | N/A |
-| **Total** | **8** | **8** | **$324,000** |
-
-### Por prioridad
-
-| Prioridad | Contactos | Acción esta semana |
-|-----------|-----------|-------------------|
-| `#Hot` | 3 (Matte, Vial, Benavides) | Propuesta, demo, follow-up |
-| `#Warm` | 2 (Sabbagh, Undurraga) | Agendar discovery, enviar material |
-| `#Cold` | 2 (Campos, Pérez-Cotapos) | Nutrir con contenido, buscar otro ángulo |
+### ECCUC (Escuela de Construcción Civil UC)
+| Campo | Valor |
+|-------|-------|
+| **Empresa** | Escuela de Construcción Civil, Pontificia Universidad Católica de Chile |
+| **Industria** | Educación |
+| **Contacto** | Felipe Ossio (Director) |
+| **Web** | construccioncivil.uc.cl |
+| **Estado** | `ACADEMIC` |
+| **Servicio** | XR (Lab de Construcción) + relación académica |
+| **Revenue** | $0 (potencial: doctorado becado 100% en Industrias de Ingeniería Civil) |
+| **Oportunidad** | Metabuild XR — $2,500 USD (por desarrollar) |
+| **Testimonial** | "La tecnología inmersiva aplicada a la enseñanza permite recrear ensayos de materiales..." — Felipe Ossio |
+| **Notas** | Múltiples reuniones registradas en Notion (dic 2025 - mar 2026). Potencial enorme a largo plazo vía doctorado + investigación + desarrollo de producto. |
 
 ---
 
-## 4. Cadencia de Revisión
+## 5. Prospectos / Pipeline
 
-### Revisión semanal (lunes, 15 min)
-- [ ] Actualizar estado de todos los contactos activos
-- [ ] Registrar actividades de la semana pasada
-- [ ] Planificar acciones de la semana entrante
-- [ ] Verificar: ¿algún contacto lleva > 2 semanas sin interacción? → Reactivar o reclasificar
-- [ ] Verificar: ¿algún `#Hot` debería ser `#Warm`? ¿Algún `#Cold` debería eliminarse?
-
-### Revisión mensual (primer lunes del mes, 30 min)
-- [ ] Revisar conversion rates (Lead → Qualified → Client)
-- [ ] Analizar Closed Lost del mes: ¿por qué se perdieron?
-- [ ] Evaluar pipeline health: ¿suficientes deals? ¿buen mix de segmentos?
-- [ ] Identificar contactos para reactivar (ex-prospects que valgan la pena reintentar)
-- [ ] Actualizar información de contactos (cambios de cargo, empresa, etc. via LinkedIn)
-
-### Revisión trimestral (30 min)
-- [ ] Evaluar si el sistema CRM necesita upgrade (¿markdown sigue siendo suficiente o necesitamos HubSpot/Pipedrive?)
-- [ ] Limpiar base de datos: eliminar contactos sin potencial, actualizar datos
-- [ ] Revisar tags: ¿son útiles? ¿falta alguno?
-- [ ] Recalibrar targets de pipeline
+| Empresa | Contacto | Servicio | Budget est. | Estado | Prioridad |
+|---------|----------|----------|-------------|--------|-----------|
+| Black & Decker | — | Smart | $5,000 | Por desarrollar | Alta |
+| ECCUC | Felipe Ossio | XR | $2,500 | Por desarrollar | Media |
+| Parque Cordillera | Carlos Rivas | Smart | TBD | En conversación | Media |
+| CIR Los Lagos | — | Smart | TBD | En conversación | Media |
+| Josué Morales | Josué Morales | Smart (edificios) | TBD | Propuesta enviada | Alta |
+| Ole Foot | — | Smart | TBD | En conversación | Baja |
+| Genoveva Moll | — | Smart (educación) | TBD | Template creado | Media |
 
 ---
 
-## 5. Templates de Comunicación Rápida
+## 6. Contactos Clave (Notion Contact Database)
 
-### Email de primer contacto (outbound)
-```
-Asunto: [Tema relevante para el contacto] + Meta Build City
+| Contacto | Organización | Relación | Canal |
+|----------|-------------|----------|-------|
+| Diego Salinas | Neurocupa | Cliente Smart | Reuniones directas |
+| Joseph Sánchez | FinteChile | Cliente Smart | Slack + reuniones |
+| Felipe Ossio | ECCUC | Académico | Reuniones UC |
+| Josué Morales | Admin. edificios | Prospecto Smart | — |
+| Juan Pablo Hidalgo | — | Contacto | — |
+| Claudia Cárdenas | — | Contacto | — |
+| Mathías Navarro | MBC | Equipo interno | Slack + directo |
 
-Estimado/a [Nombre],
+---
 
-Mi nombre es [Tu nombre] y lidero Meta Build City, una agencia de
-tecnología 4.0 especializada en la industria de la construcción.
+## 7. Métricas del Pipeline
 
-Le escribo porque [razón personalizada: vi su proyecto X / nos referió Y /
-noté en LinkedIn que Z].
+| Métrica | Valor actual |
+|---------|-------------|
+| Clientes activos (con revenue) | 2 (FinteChile, Neurocupa) |
+| Clientes completados | 7 |
+| Prospectos en pipeline | 7 |
+| Revenue total histórico | ~$206,600 USD |
+| MRR actual | ~$500-1,000 USD (Smart membresías) |
+| Deal promedio Smart | ~$4,000 USD (implementación) |
+| Deal promedio XR | ~$5,000 USD |
+| Mayor deal individual | $150,000 (World) |
 
-En MBC trabajamos con [servicio relevante] ayudando a [tipo de empresa]
-a [beneficio principal]. Por ejemplo, [resultado concreto de un caso
-similar].
+---
 
-¿Tendría 20 minutos esta o la próxima semana para conversar sobre cómo
-esto podría aplicarse a [empresa del contacto]?
+## 8. Cadencia de Revisión
 
-Quedo atento.
+### Semanal
+- [ ] Revisar estado de FinteChile y Neurocupa (clientes activos)
+- [ ] Actualizar prospectos en pipeline
+- [ ] Registrar nuevas interacciones/reuniones
+- [ ] Verificar pagos pendientes
 
-Saludos cordiales,
-[Firma]
-```
-
-### Email de follow-up post-llamada
-```
-Asunto: Resumen conversación MBC + [Empresa] | [Fecha]
-
-Estimado/a [Nombre],
-
-Muchas gracias por la conversación de hoy. Muy valioso entender
-el contexto de [Empresa].
-
-Resumen:
-- [Pain point principal discutido]
-- [Servicio MBC relevante]
-- [Next step acordado]
-
-[Adjunto material relevante si corresponde]
-
-Quedo disponible para cualquier consulta.
-
-Saludos,
-[Firma]
-```
-
-### Email de reactivación (contacto frío)
-```
-Asunto: [Nombre], ¿sigue vigente el interés en [tema]?
-
-Estimado/a [Nombre],
-
-Hace [X semanas/meses] conversamos sobre [tema]. Quería retomar
-el contacto porque [razón: tenemos un nuevo caso de éxito / hay
-una novedad en el mercado / se acerca la fecha que mencionó].
-
-[1-2 líneas de contenido de valor: link a artículo, invitación
-a evento, dato relevante del mercado]
-
-¿Le haría sentido retomar la conversación?
-
-Saludos,
-[Firma]
-```
+### Mensual
+- [ ] Revisar oportunidades estancadas (>2 semanas sin movimiento)
+- [ ] Evaluar nuevos prospectos a agregar
+- [ ] Calcular MRR y revenue del mes
+- [ ] Revisar Notion CRM por actualizaciones

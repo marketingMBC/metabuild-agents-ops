@@ -1,213 +1,148 @@
-# Pipeline de Ventas
+# Pipeline de Ventas — Meta Build City (Datos Reales)
 
-## 1. Definición de Etapas del Pipeline
-
-### Flujo general
-
-```
-Lead → Qualified → Discovery → Proposal → Negotiation → Closed Won / Closed Lost
-```
-
-### Detalle de cada etapa
-
-| # | Etapa | Definición | Criterio de entrada | Criterio de avance | Probabilidad de cierre | Responsable |
-|---|-------|-----------|--------------------|--------------------|----------------------|-------------|
-| 1 | **Lead** | Contacto identificado con potencial interés. Puede venir de inbound (web, evento, referido) o outbound (prospección directa). | Empresa del sector AEC + contacto identificado con nombre y canal de contacto | Se logra agendar una llamada/reunión de descubrimiento | 10% | Marketing / SDR |
-| 2 | **Qualified** | Lead calificado con BANT mínimo (Budget, Authority, Need, Timeline). Se confirmó que hay un dolor real y capacidad mínima de compra. | Interacción inicial confirma: (1) dolor relevante, (2) contacto tiene influencia, (3) empresa puede invertir | Discovery call agendada con decision maker o influenciador clave | 20% | SDR / Account Exec |
-| 3 | **Discovery** | Llamada de descubrimiento realizada. Se entiende profundamente el dolor, el contexto, el proceso de decisión y el timeline del cliente. | Discovery call completada con notas registradas en CRM | Cliente solicita o acepta propuesta formal / demo técnica | 35% | Account Exec |
-| 4 | **Proposal** | Propuesta formal entregada al cliente. Incluye alcance, pricing, timeline. Puede incluir demo técnica presencial. | Propuesta enviada + confirmación de recepción por el cliente | Cliente confirma que la propuesta está en evaluación activa / solicita ajustes | 50% | Account Exec |
-| 5 | **Negotiation** | Cliente está evaluando activamente. Puede haber solicitudes de ajuste de precio, alcance, términos. Pueden estar comparando con otros proveedores. | Feedback recibido sobre la propuesta / reunión de negociación agendada | Acuerdo verbal o firma de contrato | 70% | Account Exec / CEO |
-| 6a | **Closed Won** | Contrato firmado o orden de compra emitida. Deal cerrado exitosamente. | Firma de contrato / OC en Mercado Público / email de confirmación formal | N/A -- entrega a equipo de delivery | 100% | Account Exec |
-| 6b | **Closed Lost** | Oportunidad no se concretó. Se registra motivo de pérdida para aprendizaje. | Rechazo explícito del cliente / 90 días sin respuesta después de propuesta | N/A -- mover a nurture list para reactivación futura | 0% | Account Exec |
+> **Última actualización:** Marzo 2026
+> **Fuente de verdad:** Notion (database Pipeline de Proyectos + Opportunitys)
+> **Nota:** La data viva está en Notion. Este archivo es respaldo offline.
 
 ---
 
-## 2. Motivos de Closed Lost (Tracking)
+## 1. Etapas del Pipeline
 
-| Código | Motivo | Acción de follow-up |
-|--------|--------|---------------------|
-| CL-01 | Sin presupuesto | Recontactar en Q4 (planificación anual) o cuando haya proyecto nuevo |
-| CL-02 | Eligió competidor | Pedir feedback, ofrecer estar disponibles para futuro |
-| CL-03 | Proyecto cancelado/postergado | Monitorear estado del proyecto, recontactar cuando se reactive |
-| CL-04 | Timing inadecuado | Agendar follow-up en 3-6 meses |
-| CL-05 | No responde | 3 intentos espaciados, luego mover a nurture (newsletter, eventos) |
-| CL-06 | Decidió hacerlo interno | Ofrecer capacitación o servicio complementario |
-| CL-07 | Alcance no match | Registrar qué servicio buscaban para ajustar oferta futura |
+```
+Prospecto → Contactado → Demo/Reunión → Propuesta enviada → Negociación → Cerrada ganada / Cerrada perdida
+```
+
+| # | Etapa | Probabilidad |
+|---|-------|-------------|
+| 1 | Prospecto | 10% |
+| 2 | Contactado | 20% |
+| 3 | Demo/Reunión agendada | 35% |
+| 4 | Propuesta enviada | 50% |
+| 5 | Negociación | 70% |
+| 6a | Cerrada ganada | 100% |
+| 6b | Cerrada perdida | 0% |
 
 ---
 
-## 3. Pipeline Tracker
+## 2. Pipeline Activo (Marzo 2026)
 
-### Template de seguimiento
+### Deals en curso
 
-| # | Empresa | Contacto | Cargo | Segmento | Servicio principal | Etapa | Valor est. (USD) | Prob. | Valor ponderado | Fecha primer contacto | Expected close | Owner | Última actividad | Próxima acción |
-|---|---------|----------|-------|----------|-------------------|-------|-------------------|-------|-----------------|----------------------|----------------|-------|-----------------|----------------|
-| 1 | | | | | | | | | | | | | | |
+| # | Empresa | Contacto | Servicio | Etapa | Valor est. USD | Prob. | Valor pond. | Notas |
+|---|---------|----------|----------|-------|----------------|-------|-------------|-------|
+| 1 | **Black & Decker** | — | Metabuild Smart | Propuesta enviada | $5,000 | 50% | $2,500 | Ya son clientes de VR ($600). Upsell a Smart. |
+| 2 | **ECCUC** | Felipe Ossio | Metabuild XR | Contactado | $2,500 | 20% | $500 | Relación académica fuerte. Potencial doctorado. |
+| 3 | **Josué Morales** | Josué Morales | Smart (edificios) | Propuesta enviada | $5,000 | 50% | $2,500 | Admin. de edificios. Nicho interesante para Smart. |
+| 4 | **Parque Cordillera** | Carlos Rivas | Smart | Contactado | $3,000 | 20% | $600 | Ex-cliente XR. Upsell a Smart. |
+| 5 | **CIR Los Lagos** | — | Smart | Contactado | $3,000 | 20% | $600 | Centro Innovación Regional. |
+| 6 | **Ole Foot** | — | Smart | Prospecto | $3,000 | 10% | $300 | Deporte. Nuevo vertical. |
+| 7 | **Genoveva Moll** | — | Smart (educación) | Contactado | $5,000 | 20% | $1,000 | Template educación ya creado (15 DBs). |
+| **TOTAL** | | | | | **$26,500** | | **$8,000** | |
 
-### Ejemplos de deals en pipeline
+### Clientes activos generando revenue
 
-| # | Empresa | Contacto | Cargo | Segmento | Servicio principal | Etapa | Valor est. (USD) | Prob. | Valor ponderado | Fecha primer contacto | Expected close | Owner | Última actividad | Próxima acción |
-|---|---------|----------|-------|----------|-------------------|-------|-------------------|-------|-----------------|----------------------|----------------|-------|-----------------|----------------|
-| 1 | Echeverría Izquierdo | Andrés Matte | Gerente de Innovación | Constructora | AI Monitoring + BIM | Discovery | $85,000 | 35% | $29,750 | 2025-01-15 | 2025-04-30 | RR | Discovery call 02/10 -- dolor claro en control de avance | Preparar demo AI monitoring para proyecto edificio Lo Barnechea |
-| 2 | Fundamenta | Carolina Vial | Gerente Comercial | Inmobiliaria | XR Virtual Tours | Proposal | $22,000 | 50% | $11,000 | 2025-01-20 | 2025-03-15 | RR | Propuesta enviada 02/05 para proyecto "Parque Bicentenario" | Follow-up telefónico viernes 02/14 para feedback |
-| 3 | Sabbagh Arquitectos | Felipe Sabbagh | Socio Director | Arquitectura | XR Visualization | Qualified | $12,000 | 20% | $2,400 | 2025-02-01 | 2025-05-30 | RR | Email intro enviado, aceptó reunirse | Agendar discovery call semana del 17/02 |
-| 4 | MOP - Dirección de Arquitectura | Roberto Campos | Jefe División Edificación Pública | Gobierno | BIM Implementation | Lead | $60,000 | 10% | $6,000 | 2025-02-08 | 2025-09-30 | RR | Intercambiamos tarjetas en evento PlanBIM | Enviar email con propuesta de workshop BIM para funcionarios |
-| 5 | Inmobiliaria Almagro | Martín Benavides | Gerente de Marketing | Inmobiliaria | XR + Marketing | Negotiation | $45,000 | 70% | $31,500 | 2024-12-10 | 2025-02-28 | RR | Reunión de negociación 02/07, pidieron ajuste de precio | Enviar propuesta revisada con descuento por paquete de 2 proyectos |
+| Cliente | Servicio | Revenue cerrado | MRR estimado | Estado |
+|---------|----------|----------------|-------------|--------|
+| **FinteChile** | Smart | $5,800 | ~$300-500/mes | Pago esta semana |
+| **Neurocupa** | Smart | $2,350 | ~$200-300/mes | Por cobrar |
+
+---
+
+## 3. Deals Cerrados (Histórico)
+
+| # | Empresa | Servicio | Valor USD | Fecha cierre | Duración venta |
+|---|---------|----------|-----------|-------------|----------------|
+| 1 | World | Web3 Ops + Marketing | $150,000 | 2024 | — |
+| 2 | Parque Cordillera | XR (3 servicios) | $15,000 | Ago 2023 | Primer deal |
+| 3 | FinteChile | Smart | $5,800 | Mar 2026 | ~2 meses |
+| 4 | Grupo HUB | XR | $5,500 | 2024-2025 | — |
+| 5 | UNAB | VR | $3,000 | 2025 | — |
+| 6 | Neurocupa | Smart | $2,350 | Mar 2026 | ~1 mes |
+| 7 | FinteChile (anterior) | Servicios | $2,000 | 2025 | — |
+| 8 | Aleph | XR (3 espacios) | $1,000 | 2024 | — |
+| 9 | Black & Decker | VR Showroom | $600 | 2025 | — |
+| 10 | Paris Blockchain Week | Hackathon | $1,000 | 2025 | — |
+| | **TOTAL CERRADO** | | **~$186,250** | | |
 
 ---
 
 ## 4. Métricas del Pipeline
 
-### Dashboard de métricas
+### Vista general
 
-#### Pipeline total
-| Métrica | Valor actual | Target mensual |
-|---------|-------------|---------------|
-| **Total pipeline value** (suma de todos los deals activos) | $224,000 | $300,000+ |
-| **Weighted pipeline value** (suma de valor ponderado) | $80,650 | $100,000+ |
-| **Cantidad de deals activos** | 5 | 10+ |
-| **Deal promedio** | $44,800 | $35,000-$50,000 |
+| Métrica | Valor actual | Target Q2 2026 |
+|---------|-------------|----------------|
+| Pipeline total (deals en curso) | $26,500 | $50,000+ |
+| Pipeline ponderado | $8,000 | $20,000+ |
+| Deals activos | 7 | 15+ |
+| MRR actual | ~$500-800 | $3,000+ |
+| Revenue cerrado total (lifetime) | ~$186,250 | — |
+| Revenue cerrado 2026 (YTD) | $8,150 | $50,000+ |
 
-#### Conversion rates por etapa
-| Transición | Rate actual | Target | Benchmark B2B tech |
-|-----------|-----------|--------|-------------------|
-| Lead → Qualified | -- | 40-50% | 30-40% |
-| Qualified → Discovery | -- | 60-70% | 50-60% |
-| Discovery → Proposal | -- | 50-60% | 40-50% |
-| Proposal → Negotiation | -- | 40-50% | 30-40% |
-| Negotiation → Closed Won | -- | 50-60% | 40-50% |
-| **Overall Lead → Closed Won** | -- | **8-12%** | **5-10%** |
+### Revenue por tipo de servicio (histórico)
 
-#### Velocidad del pipeline
-| Métrica | Actual | Target |
-|---------|--------|--------|
-| Tiempo promedio Lead → Qualified | -- | < 2 semanas |
-| Tiempo promedio Qualified → Discovery | -- | < 1 semana |
-| Tiempo promedio Discovery → Proposal | -- | < 2 semanas |
-| Tiempo promedio Proposal → Close | -- | < 4 semanas |
-| **Ciclo total promedio** | -- | **2-4 meses** |
+| Servicio | Revenue total | % del total | # Deals |
+|----------|-------------|-------------|---------|
+| Web3 Ops (World) | $150,000 | 72% | 1 |
+| XR/Metaversos | $25,100 | 12% | 5 |
+| Metabuild Smart | $8,150 | 4% | 2 |
+| Hackathons | $1,350 | 1% | 3 |
+| Odisea (empleo) | $20,000 | 10% | 1 |
 
-#### Métricas por segmento
-| Segmento | Deals en pipeline | Valor total | Valor ponderado | Win rate |
-|----------|------------------|-------------|-----------------|----------|
-| Constructoras | 1 | $85,000 | $29,750 | -- |
-| Inmobiliarias | 2 | $67,000 | $42,500 | -- |
-| Arquitectura | 1 | $12,000 | $2,400 | -- |
-| Gobierno | 1 | $60,000 | $6,000 | -- |
-| **Total** | **5** | **$224,000** | **$80,650** | -- |
+### Revenue por industria (histórico)
 
-#### Métricas por servicio
-| Servicio | Deals en pipeline | Valor total |
-|----------|------------------|-------------|
-| XR (tours, visualization, showrooms) | 3 | $79,000 |
-| AI (monitoring, analytics) | 1 | $85,000 |
-| BIM (implementation, coordination) | 1 | $60,000 |
-| Marketing (digital, content) | 1 (paquete) | incl. en XR+Mktg |
-| Blockchain | 0 | $0 |
+| Industria | Revenue | % |
+|-----------|---------|---|
+| Web3/Crypto | $172,350 | 83% |
+| Medio ambiente | $15,000 | 7% |
+| Fintech | $7,800 | 4% |
+| Educación | $3,000 | 1.5% |
+| Tecnología | $5,500 | 3% |
+| Salud | $2,350 | 1% |
+| Retail | $600 | 0.3% |
 
 ---
 
-## 5. Pipeline Review Semanal
+## 5. Análisis Estratégico del Pipeline
 
-### Agenda de reunión semanal de pipeline (30 min, lunes AM)
+### Fortalezas
+- **Metabuild Smart tiene modelo recurrente** — primer MRR real de MBC
+- **Template de Smart para educación ya existe** (Genoveva Moll) — replicable
+- **Template para salud ya existe** (Neurocupa) — replicable
+- **Upsell natural:** clientes XR pasados → Smart (B&D, Parque Cordillera)
+- **Red de contactos activa** en Notion
 
-#### Participantes
-- Account Executive (owner del pipeline)
-- CEO / Head of Sales
-- CTO (para validación técnica si es necesario)
+### Debilidades
+- **Pipeline concentrado en deals pequeños** ($2,500-$5,000)
+- **Sin deal grande en pipeline** (nada comparable a World)
+- **Dependencia de Rodrigo** para todo el proceso de venta
+- **Ciclo de venta no medido** — no hay data de conversion rates reales
 
-#### Estructura
+### Oportunidades
+- **Escalar Smart por vertical:** replicar template educación y salud a más clientes
+- **ECCUC puede abrir puertas** a toda la UC y otras universidades
+- **Parque Cordillera ya confía en MBC** — upsell Smart es natural
+- **Nicho de administración de edificios** (Josué) puede ser escalable
+- **Doctorado ECCUC** puede generar I+D financiado
 
-**1. Resumen del pipeline (5 min)**
-- Total value / weighted value vs target
-- Deals ganados y perdidos la semana anterior
-- Nuevos leads ingresados
-
-**2. Review deal-by-deal (15 min)**
-- Solo deals en etapa Discovery, Proposal, o Negotiation (los que pueden cerrarse en 30-60 días)
-- Por cada deal:
-  - ¿Qué avanzó esta semana?
-  - ¿Cuál es el next step concreto?
-  - ¿Hay algún blocker?
-  - ¿La probabilidad sigue siendo correcta? (ajustar si cambió algo)
-  - ¿Necesita apoyo del CEO o CTO?
-
-**3. Deals stalled / at risk (5 min)**
-- Deals sin actividad en > 2 semanas
-- Decisión: reactivar con acción concreta o mover a Closed Lost
-
-**4. Forecast y acciones (5 min)**
-- ¿Qué deals son realistas para cerrar este mes?
-- ¿Hay suficiente pipeline para cumplir el target del mes/quarter?
-- Si no: ¿qué acciones de generación de leads se necesitan?
-
-### Template de notas de pipeline review
-
-```
-## Pipeline Review - [Fecha]
-
-### Resumen
-- Pipeline total: $[X] | Ponderado: $[Y]
-- Deals activos: [N]
-- Won esta semana: [deals] | Lost: [deals]
-- Nuevos leads: [N]
-
-### Deal Updates
-1. [Empresa] - [Etapa] - $[Valor]
-   - Update: [qué pasó]
-   - Next: [próxima acción + fecha]
-   - Risk: [si hay]
-
-### Deals Stalled
-- [Empresa] - última actividad [fecha] → Acción: [plan]
-
-### Forecast
-- Cierre probable este mes: $[X]
-- Acciones necesarias: [lista]
-```
+### Acciones prioritarias esta semana
+1. [ ] Cobrar $5,800 de FinteChile
+2. [ ] Cobrar $2,350 de Neurocupa
+3. [ ] Follow-up con Josué Morales (propuesta enviada)
+4. [ ] Preparar propuesta B&D Smart ($5,000)
+5. [ ] Explorar upsell Smart con Parque Cordillera
 
 ---
 
-## 6. Pipeline Health Indicators
+## 6. Nichos Smart a Desarrollar
 
-### Indicadores de pipeline sano
+Basado en templates ya creados y oportunidades identificadas:
 
-| Indicador | Saludable | Alerta | Crítico |
-|-----------|----------|--------|---------|
-| Pipeline coverage (pipeline total / target revenue) | > 3x | 2-3x | < 2x |
-| Deals activos | > 10 | 5-10 | < 5 |
-| Deals en etapa avanzada (Proposal+) | > 3 | 1-3 | 0 |
-| Nuevos leads por semana | > 3 | 1-3 | 0 |
-| Deals stalled (> 3 semanas sin movimiento) | 0-1 | 2-3 | > 3 |
-| Diversificación de segmentos | 3-4 segmentos | 2 segmentos | 1 segmento |
-| Average deal age | < 60 días | 60-90 días | > 90 días |
-
-### Acciones correctivas
-
-| Problema | Acción |
-|----------|--------|
-| Poco pipeline total | Aumentar outbound: más eventos, más prospección LinkedIn, activar referidos |
-| Muchos leads pero baja conversión a Qualified | Revisar targeting -- ¿estamos hablando con las personas correctas? |
-| Deals se estancan en Discovery | Mejorar discovery call, asegurar que estamos hablando con decision makers |
-| Deals se estancan en Proposal | Revisar calidad de propuesta, hacer follow-up más agresivo, ofrecer piloto |
-| Alta tasa de Closed Lost | Analizar motivos, ajustar approach de venta, revisar pricing |
-| Pipeline concentrado en 1 segmento | Diversificar esfuerzo de prospección a segmentos subatendidos |
-
----
-
-## 7. Herramientas Recomendadas
-
-### MVP (ahora)
-- **Este archivo markdown** + spreadsheet en Google Sheets para tracking diario
-- **Google Calendar** para recordatorios de follow-up
-- **Gmail** con templates para emails de seguimiento
-
-### Siguiente nivel (cuando haya 10+ deals activos)
-- **HubSpot Free CRM** o **Pipedrive** ($15/user/mes) para gestión visual del pipeline
-- **Calendly** para agendar reuniones sin fricción
-- **Loom** para enviar videos personalizados de follow-up
-
-### Escala (cuando haya equipo de ventas de 3+ personas)
-- **HubSpot Sales Pro** ($90/user/mes) para sequences, reporting, forecasting
-- **LinkedIn Sales Navigator** ($80/mes) para prospección
-- **Gong/Chorus** para grabar y analizar llamadas de venta
+| Nicho | Template listo? | Clientes potenciales | Pricing sugerido |
+|-------|----------------|---------------------|-----------------|
+| **Salud** (centros terapéuticos) | Sí (Neurocupa) | Centros de terapia, clínicas pequeñas | $2,000-5,000 impl. + $200-500/mes |
+| **Educación** (colegios) | Sí (Genoveva Moll) | Colegios, escuelas, centros educativos | $3,000-5,000 impl. + $300-500/mes |
+| **Edificios** (administración) | No (en desarrollo) | Administraciones de edificios | $2,000-4,000 impl. + $200-400/mes |
+| **Fintech/Startups** | En progreso (FinteChile) | Startups, asociaciones gremiales | $3,000-6,000 impl. + $300-600/mes |
+| **Construcción** (gestión de obra) | Parcial | Constructoras, inspección | $3,000-8,000 impl. + $300-500/mes |
+| **PMO/Operaciones** | Sí (Odisea/MBC) | Empresas con operaciones complejas | $3,000-5,000 impl. + $300-500/mes |
